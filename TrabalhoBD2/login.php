@@ -1,0 +1,145 @@
+<?php
+
+session_start();
+
+?>
+<html lang="pt">
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.php">Blog de carros</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="top10maisvendidos.php">Top 10 carros mais vendidos</a></li>
+            <li><a href="comodirigir.php">Como dirigir passo a passo</a></li>
+            <li><a href="10carrosmaisseguros.php">Os 10 carros mais seguros</a></li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="cadastro.php"><span class="glyphicon glyphicon-user"></span> Cadastrar</a></li>
+            <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="logout.php"<span class="glyphicon glyphicon-log-out"<span/> Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+    <div class="login">
+
+
+        <h1 class="Texto_Login">Tela de Login</h1>
+
+            <br><br>
+
+            <div class="form-group label-float">
+                <input class="form-control"  placeholder=" " type="email" name="email">
+                <label>Email:</label>
+            </div>
+            <br>
+            <div class="form-group label-float">
+                <input class="form-control"  placeholder=" " type="password" name="senha">
+                <label>Senha:</label>
+            </div>
+
+            <form method="post" action="autenticacao.php" >
+            <br><button  type="submit" class="btn btn-primary btn-md butao">Entrar</button>
+            <br>
+        </form>
+
+        <form method="post" action="cadastro.php">
+            <button type="submit" class="btn btn-primary btn-md butao">Cadastro</button>
+        </form>
+        <div class="col-sm-4">
+
+        </div>
+
+        <div class="col-sm-4"></div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<style>
+    .Texto_Login{
+        text-align: center ;
+    }
+    .foto1{
+        width: 350px;
+        height: 350px;
+    }
+    .label-float{
+        position: relative;
+        padding-top: 13px;
+    }
+
+    .label-float input{
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        outline: none;
+        min-width: 250px;
+        padding: 25px 15px;
+        font-size: 16px;
+        transition: all .1s linear;
+        -webkit-transition: all .1s linear;
+        -moz-transition: all .1s linear;
+        -webkit-appearance:none;
+    }
+
+    .label-float input:focus{
+        border: 2px solid #3951b2;
+    }
+
+    .label-float input::placeholder{
+        color:transparent;
+    }
+
+    .label-float label{
+        pointer-events: none;
+        position: absolute;
+        top: calc(50% - 8px);
+        left: 15px;
+        transition: all .1s linear;
+        -webkit-transition: all .1s linear;
+        -moz-transition: all .1s linear;
+        background-color: white;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .label-float input:required:invalid + label{
+        color: red;
+    }
+    .label-float input:focus:required:invalid{
+        border: 2px solid red;
+    }
+    .label-float input:required:invalid + label:before{
+        content: '*';
+    }
+    .label-float input:focus + label,
+    .label-float input:not(:placeholder-shown) + label{
+        font-size: 13px;
+        top: 0;
+        color: #3951b2;
+    }
+.butao{
+
+}
+</style>
+
+
+
+
+
+?>
